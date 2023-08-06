@@ -19,7 +19,7 @@ public class CalculatorController {
         return "Добро пожаллвать в калькулятор!";
     }
     @GetMapping("/plus")
-   public String plus(@RequestParam int num1, @RequestParam int num2) {
+    public String plus(@RequestParam int num1, @RequestParam int num2) {
         int result = calculatorService.sum(num1, num2);
         return buildResponse(num1, num2, result, '+');
     }

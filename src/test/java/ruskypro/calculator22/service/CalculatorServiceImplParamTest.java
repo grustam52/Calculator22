@@ -29,16 +29,16 @@ public class CalculatorServiceImplParamTest {
 
     @MethodSource("provideParams")
     @ParameterizedTest
-    void multiply(int num1, int num2) {
+    void  multiply(int num1, int num2) {
         assertEquals(num1 * num2, service.multiply(num1, num2));
     }
 
     @MethodSource("provideParams")
     @ParameterizedTest
-    void divide(int num1, int num2) {
+    void  divide(int num1, int num2) {
         assertEquals(num1 / num2, service.divide(num1, num2));
     }
-    private static Stream<Arguments> provideParams() {
+    private  static Stream<Arguments> provideParams() {
         return Stream.of(
                 Arguments.of(ONE, TWO),
                 Arguments.of(THREE, TWO),

@@ -30,12 +30,12 @@ class CalculatorServiceImplTest {
     }
 
     @Test
-    void divide() {
+    void  divide() {
         assertEquals(THREE / ONE, service.divide(THREE, ONE));
         assertEquals(THREE / THREE, service.divide(THREE, THREE));
     }
     @Test
-    void shouldTrowZeroDivideException(){
+    void  shouldTrowZeroDivideException(){
         assertThrows(ZeroDivideException.class, () -> service.divide(THREE, ZERO));
     }
 }
